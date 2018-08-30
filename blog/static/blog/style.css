@@ -1,0 +1,51 @@
+body {
+    font-family: AppleGothic;
+}
+
+main {
+    width: 50%;
+    alignment: center;
+    margin: auto;
+}
+
+header {
+    text-align: right;
+}
+
+nav {
+    padding-top: 20px;
+    display: inline-block;
+    margin: auto;
+}
+
+
+.nav_link {
+    margin-left: 10px;
+    text-decoration: none;
+    font-family: AppleGothic;
+    font-weight: bold;
+    color: black;
+}
+
+.nav_link:hover {
+    color: grey;
+}
+
+#greeting_wrapper {
+}
+
+#main_greetings {
+}
+
+hr {
+    margin-top: 10px;
+}
+
+.post_links {
+    text-decoration: none;
+    color: darkred;
+}
+
+#post_pub_date {
+    text-align: right;
+}

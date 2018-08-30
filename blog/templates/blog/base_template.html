@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome to Moniroth's Site!{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+</head>
+<body>
+<main>
+    <header>
+        <nav>
+            <a href="{% url "index" %}" class="nav_link">Home</a>
+            <a href="{% url "post_list" %}" class="nav_link">Blog</a>
+            <a href="{% url "resume_page" %}" class="nav_link">Resume</a>
+        </nav>
+        <hr>
+    </header>
+    {% block content %}
+    {% endblock %}
+</main>
+{#todo: create the top bar and with the navigations#}
+</body>
+</html>

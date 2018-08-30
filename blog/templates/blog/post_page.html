@@ -1,0 +1,14 @@
+{% extends "blog/base_template.html" %}
+
+{% block content %}
+
+    <h1>{{ blog_post.title }}</h1>
+    <p>{{ blog_post.pub_date }}</p>
+    {% autoescape off %}{{ content }}{% endautoescape %}
+
+    {% for i in images %}
+        <p>{{ i.image.name }}</p>
+
+    {% endfor %}
+
+{% endblock %}

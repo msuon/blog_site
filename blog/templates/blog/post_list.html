@@ -1,0 +1,22 @@
+{% extends "blog/base_template.html" %}
+
+{% block title %}
+    Moniroth's Blog
+{% endblock %}
+
+{% block content %}
+    <h2 class="page_title">Moniroth's Blog</h2>
+
+    {% if post_list %}
+        <table style="width:100%">
+            {% for p in post_list %}
+                <tr>
+                    <td><a href="{% url 'post_page' %}?title={{ p.title }}" class="post_links">{{ p.title }}</a><br></td>
+                    <td id="post_pub_date">{{ p.pub_date }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p> No posts yet!</p>
+    {% endif %}
+{% endblock %}
